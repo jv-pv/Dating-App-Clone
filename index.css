@@ -58,6 +58,7 @@ ul li:nth-of-type(2) img{
     justify-content: center;
     align-items: flex-start;
     padding: 1em 0 0;
+    position: relative;
 }
 
 .dog-profile-wrapper {
@@ -94,6 +95,32 @@ ul li:nth-of-type(2) img{
     justify-self: flex-start;
     align-self: flex-end;
     padding: 0em 1.3em 1em;
+}
+
+/* Badges */ 
+
+.badge-container {
+    width: 300px;
+    height: 300px;
+    grid-row: 1 / 3;
+    grid-column: 1 / 2;
+    overflow: hidden;
+}
+
+.badge-like {
+    transform: translate(20px,65px) rotate(-45deg);
+    opacity: 0;
+}
+
+.badge-dislike {
+    transform: translate(20px,-50px) rotate(-45deg);
+    opacity: 0;
+}
+
+.badge-like, 
+.badge-dislike {
+    width: 200px;
+    height: 110px;
 }
 
 /* Buttons */
