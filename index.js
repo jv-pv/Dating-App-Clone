@@ -9,8 +9,9 @@ document.querySelector('.dislike-btn').addEventListener('click', dislike)
 
 function getNewDog() {
     currentDogIndex += 1
+    console.log(`This is the current dog index ${currentDogIndex}`)
     currentDog = new Dog(dogsData[currentDogIndex])
-    console.log(currentDog.hasBeenLiked)
+    loopBack()
     render()
 }
 
@@ -23,6 +24,16 @@ function dislike() {
     currentDog.setMatchStatus(false)
     getNewDog()
 }
+
+function loopBack() {
+    let finalIndex = dogsData.length - 1
+    if (currentDogIndex > finalIndex) {
+        // console.log(`Final Index: ${finalIndex} Current Index: ${currentDogIndex}`)
+        currentDogIndex = 0
+        currentDog = new Dog(dogsData[currentDogIndex])
+    }
+}
+
 
 function render() {
     document.querySelector('.user-profiles-container').innerHTML = currentDog.setDogHtml()

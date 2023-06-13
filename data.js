@@ -25,4 +25,3 @@ const dogsData = [
 ]
 
 export default dogsData
-// Remember to export the data!
