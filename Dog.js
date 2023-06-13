@@ -6,7 +6,7 @@ class Dog {
     setMatchStatus(bool) {
         this.hasBeenLiked = bool
         this.hasBeenSwiped = true
-        // console.log(this.hasBeenLiked)
+        console.log(this.hasBeenLiked)
     }
  
     setDogHtml() {
@@ -16,10 +16,7 @@ class Dog {
                 <img class="profile-img" style="width: 100%; height: 100%;" src="${avatar}">
                 <span class="name-age">${name}, ${age}</span>
                 <span class="caption">${bio}</span>
-            <div class="badge-container">
-                <img class="badge-like" src="./images/badge-like.png" alt="like-badge">
-                <img class="badge-dislike" src="./images/badge-nope.png" alt="dislike-badge">
-            </div>
+
         </div>
         `
     }

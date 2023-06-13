@@ -33,6 +33,7 @@ header {
 
 main {
     height: 750px;
+    position: relative;
 }
 
 ul {
@@ -100,27 +101,38 @@ ul li:nth-of-type(2) img{
 /* Badges */ 
 
 .badge-container {
+    position: absolute;
+    inset: 0;
     width: 300px;
     height: 300px;
-    grid-row: 1 / 3;
-    grid-column: 1 / 2;
     overflow: hidden;
 }
 
 .badge-like {
-    transform: translate(20px,65px) rotate(-45deg);
+    transform: translate(-250px,100px) rotate(-45deg);
     opacity: 0;
+    transition: all 1000ms;
 }
 
 .badge-dislike {
-    transform: translate(20px,-50px) rotate(-45deg);
+    transform: translate(-250px,-20px) rotate(-45deg);
     opacity: 0;
+    transition: all 1000ms;
 }
 
 .badge-like, 
 .badge-dislike {
     width: 200px;
     height: 110px;
+}
+
+.badge-like.active {
+    transform: translate(50px, 100px) rotate(-45deg);
+    opacity: 1;
+}
+.badge-dislike.active {
+    transform: translate(50px, -20px) rotate(-45deg);
+    opacity: 1;
 }
 
 /* Buttons */
