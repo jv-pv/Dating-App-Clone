@@ -1,4 +1,3 @@
-// Remember to import the data and Dog class!
 import dogsData from "./data.js"
 import Dog from './Dog.js'
 let currentDogIndex = 0
@@ -28,7 +27,7 @@ function dislike() {
 function loopBack() {
     let finalIndex = dogsData.length - 1
     if (currentDogIndex > finalIndex) {
-        // console.log(`Final Index: ${finalIndex} Current Index: ${currentDogIndex}`)
+        console.log(`Final Index: ${finalIndex} Current Index: ${currentDogIndex}`)
         currentDogIndex = 0
         currentDog = new Dog(dogsData[currentDogIndex])
     }
