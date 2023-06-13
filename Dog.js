@@ -4,8 +4,10 @@ class Dog {
         Object.assign(this, data)
     }
 
-    setMatchStatus() {
-        
+    setMatchStatus(bool) {
+        this.hasBeenLiked = bool
+        this.hasBeenSwiped = true
+        console.log(this.hasBeenLiked)
     }
  
     setDogHtml() {
@@ -23,6 +25,5 @@ class Dog {
         `
     }
 }
-
 
 export default Dog

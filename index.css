@@ -141,6 +141,7 @@ button {
     border-radius: 50px;
     box-shadow: 0 0 30px -10px gray;
     border: none;
+    cursor: pointer;
 }
 
 .like-btn img {
