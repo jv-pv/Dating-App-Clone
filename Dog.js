@@ -16,7 +16,6 @@ class Dog {
                 <img class="profile-img" style="width: 100%; height: 100%;" src="${avatar}">
                 <span class="name-age">${name}, ${age}</span>
                 <span class="caption">${bio}</span>
-
         </div>
         `
     }
