@@ -60,7 +60,6 @@ ul li:nth-of-type(2) img{
     align-items: flex-start;
     padding: 1em 0 0;
     position: relative;
-    overflow: hidden;
 }
 
  .fade-container {
@@ -74,7 +73,7 @@ ul li:nth-of-type(2) img{
     opacity: 0;
  }
 
- .fade-container-dislike {
+ .fade-container.dislike {
     opacity: 0;
  }
 

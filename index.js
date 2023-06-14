@@ -1,4 +1,3 @@
-// Remember to import the data and Dog class!
 import dogsData from "./data.js"
 import Dog from './Dog.js'
 const likeBadge = document.querySelector('.badge-like')
@@ -44,7 +43,7 @@ function dislike() {
     if (dislikeBtn) {
         dislikeBadge.classList.add('active')
         setTimeout(() => {
-            fadeContainer.classList.add('fade-container-dislike')
+            fadeContainer.classList.add('dislike')
         }, 600);
     }
     setTimeout(()=> {
@@ -52,7 +51,7 @@ function dislike() {
     }, 500)
     setTimeout(()=> {
         dislikeBtn.disabled = false
-        fadeContainer.classList.remove('fade-container-dislike')
+        fadeContainer.classList.remove('dislike')
         currentDog.setMatchStatus(false)
         getNewDog()
     }, 1000)
