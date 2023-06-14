@@ -12,7 +12,7 @@ likeBtn.addEventListener('click', like)
 dislikeBtn.addEventListener('click', dislike)
 
 function getNewDog() {
-    currentDogIndex += 1
+    currentDogIndex++
     // currentDogIndex = (currentDogIndex + 1) % dogsData.length 
     currentDog = new Dog(dogsData[currentDogIndex])
     loopBack()
