@@ -5,6 +5,7 @@ const likeBadge = document.querySelector('.badge-like')
 const dislikeBadge = document.querySelector('.badge-dislike')
 const likeBtn = document.querySelector('.like-btn')
 const dislikeBtn = document.querySelector('.dislike-btn')
+const fadeContainer = document.querySelector('.fade-container')
 let currentDogIndex = 0
 let currentDog = new Dog(dogsData[currentDogIndex])
 
@@ -23,34 +24,44 @@ function like() {
     likeBtn.disabled = true
     if (likeBtn) {
         likeBadge.classList.add('active')
+        setTimeout(() => {
+            fadeContainer.classList.add('like')
+        }, 600);
     }
     setTimeout(() => {
-        likeBtn.disabled = false
         likeBadge.classList.remove('active')
+    }, 500);
+    setTimeout(() => {
+        likeBtn.disabled = false
+        fadeContainer.classList.remove('like')
         currentDog.setMatchStatus(true)
         getNewDog()
-    }, 1500)
+    }, 1000)
 }
 
 function dislike() {
     dislikeBtn.disabled = true
     if (dislikeBtn) {
         dislikeBadge.classList.add('active')
+        setTimeout(() => {
+            fadeContainer.classList.add('fade-container-dislike')
+        }, 600);
     }
-
+    setTimeout(()=> {
+        dislikeBadge.classList.remove('active')
+    }, 500)
     setTimeout(()=> {
         dislikeBtn.disabled = false
-        dislikeBadge.classList.remove('active')
+        fadeContainer.classList.remove('fade-container-dislike')
         currentDog.setMatchStatus(false)
         getNewDog()
-    }, 1500)
+    }, 1000)
 }
     
 
 function loopBack() {
     let finalIndex = dogsData.length - 1
     if (currentDogIndex > finalIndex) {
-        // console.log(`Final Index: ${finalIndex} Current Index: ${currentDogIndex}`)
         currentDogIndex = 0
         currentDog = new Dog(dogsData[currentDogIndex])
     }
@@ -58,7 +69,7 @@ function loopBack() {
 
 
 function render() {
-    document.querySelector('.user-profiles-container').innerHTML = currentDog.setDogHtml()
+    document.querySelector('.fade-container').innerHTML = currentDog.setDogHtml()
 }
 
 render()
