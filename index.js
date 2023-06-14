@@ -5,11 +5,13 @@ const dislikeBadge = document.querySelector('.badge-dislike')
 const likeBtn = document.querySelector('.like-btn')
 const dislikeBtn = document.querySelector('.dislike-btn')
 const fadeContainer = document.querySelector('.fade-container')
+const logo = document.querySelector('.logo')
 let currentDogIndex = 0
 let currentDog = new Dog(dogsData[currentDogIndex])
 
 likeBtn.addEventListener('click', like)
 dislikeBtn.addEventListener('click', dislike)
+logo.addEventListener('click', reRender)
 
 function getNewDog() {
     currentDogIndex++
@@ -66,6 +68,11 @@ function loopBack() {
     }
 }
 
+function reRender() {
+    currentDogIndex = (currentDogIndex + 1) % dogsData.length
+    currentDog = new Dog(dogsData[currentDogIndex])
+    render()
+}
 
 function render() {
     document.querySelector('.fade-container').innerHTML = currentDog.setDogHtml()

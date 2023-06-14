@@ -49,6 +49,7 @@ ul img {
 
 ul li:nth-of-type(2) img{
     width: 75px;
+    cursor: pointer;
 }
 
 .user-profiles-container {
