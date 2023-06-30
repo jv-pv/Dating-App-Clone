@@ -15,9 +15,9 @@ logo.addEventListener('click', reRender)
 
 function getNewDog() {
     currentDogIndex++
-    // currentDogIndex = (currentDogIndex + 1) % dogsData.length 
+    currentDogIndex = (currentDogIndex + 1) % dogsData.length 
     currentDog = new Dog(dogsData[currentDogIndex])
-    loopBack()
+    // loopBack()
     render()
 }
 
@@ -60,13 +60,13 @@ function dislike() {
 }
     
 
-function loopBack() {
-    let finalIndex = dogsData.length - 1
-    if (currentDogIndex > finalIndex) {
-        currentDogIndex = 0
-        currentDog = new Dog(dogsData[currentDogIndex])
-    }
-}
+// function loopBack() {
+//     let finalIndex = dogsData.length - 1
+//     if (currentDogIndex > finalIndex) {
+//         currentDogIndex = 0
+//         currentDog = new Dog(dogsData[currentDogIndex])
+//     }
+// }
 
 function reRender() {
     currentDogIndex = (currentDogIndex + 1) % dogsData.length
