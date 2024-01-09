@@ -6,7 +6,6 @@ class Dog {
     setMatchStatus(bool) {
         this.hasBeenLiked = bool
         this.hasBeenSwiped = true
-        console.log(this.hasBeenLiked)
     }
  
     setDogHtml() {
